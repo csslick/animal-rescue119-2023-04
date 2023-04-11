@@ -20,17 +20,22 @@ function App() {
       })
   }, []);
 
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/detail/:id" element={<Detail data={data} />} />
+        {/* 맨 아래에 404 추가 */}
+        <Route path="/*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
-
+function Page404() {
+  return (
+    <h1>404 페이지가 존재하지 않습니다.</h1>
+  )
+}
 
 export default App
