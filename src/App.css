@@ -26,7 +26,7 @@
 
 .container{
   padding: 20px;
-  background: #ccc;
+  background: #efefef;
 }
 
 ul {
@@ -38,7 +38,7 @@ ul {
 
 ul.animal-list {
   width: 100%;
-  outline: 1px solid #333;
+  outline: 1px solid #999;
 }
 
 ul.animal-list .item {

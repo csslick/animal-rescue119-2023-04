@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 export default function Home(props) {
   console.log(props)
@@ -15,11 +16,13 @@ export default function Home(props) {
             data.length > 0 ? 
               data.map((item, i) => {
                 return (
-                  <li className='item'>
-                    <img src={item.ty3Picture} />
-                    <h4>{item.sj}</h4>
-                    <p className='kind'>{item.ty3Kind}</p>
-                    <p className='process'>{item.ty3Process}</p>
+                  <li className='item' key={i}>
+                    <Link to={`/detail/${i}`}>
+                      <img src={item.ty3Picture} />
+                      <h4>{item.sj}</h4>
+                      <p className='kind'>{item.ty3Kind}</p>
+                      <p className='process'>{item.ty3Process}</p>
+                    </Link>
                 </li>
                 )
               }) : null
