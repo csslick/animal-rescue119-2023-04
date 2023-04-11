@@ -28,3 +28,32 @@
   padding: 20px;
   background: #ccc;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.animal-list {
+  width: 100%;
+  outline: 1px solid #333;
+}
+
+ul.animal-list .item {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+ul.animal-list .item img{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.process {
+  color: red;
+}
