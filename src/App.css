@@ -1,7 +1,30 @@
+* {
+  margin: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+.navbar {
+  background: #000;
+}
+.navbar ul {
+  padding: 0;
+  padding: 20px 0;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+}
+
+.container{
+  padding: 20px;
+  background: #ccc;
+}

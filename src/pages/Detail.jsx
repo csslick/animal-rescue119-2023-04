@@ -5,7 +5,9 @@ export default function Detail() {
   return (
     <>
       <Navbar />
-      <div>Detail</div>
+      <div className='container'>
+        <h1>Detail</h1>
+      </div>
     </>
   )
 }
