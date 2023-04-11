@@ -11,12 +11,17 @@ export default function Home(props) {
       <div className='container'>
         <h1>Home</h1>
         <ul>
-          <li>
-            <img src={data[0].ty3Picture} />
-            <h4>{data[0].sj}</h4>
-            <p>{data[0].ty3Kind}</p>
-            <p>{data[0].ty3Process}</p>
-          </li>
+          {
+            data.length > 0 ? (
+              <li>
+                <img src={data[0].ty3Picture} />
+                <h4>{data[0].sj}</h4>
+                <p>{data[0].ty3Kind}</p>
+                <p>{data[0].ty3Process}</p>
+              </li>
+            ): null
+          }
+ 
         </ul>
         {/* ty3Picture 사진
         ty3Kind 품종
