@@ -12,14 +12,17 @@ export default function Home(props) {
         <h1>Home</h1>
         <ul>
           {
-            data.length > 0 ? (
-              <li>
-                <img src={data[0].ty3Picture} />
-                <h4>{data[0].sj}</h4>
-                <p>{data[0].ty3Kind}</p>
-                <p>{data[0].ty3Process}</p>
-              </li>
-            ): null
+            data.length > 0 ? 
+              data.map((item, i) => {
+                return (
+                  <li>
+                  <img src={item.ty3Picture} />
+                  <h4>{item.sj}</h4>
+                  <p>{item.ty3Kind}</p>
+                  <p>{item.ty3Process}</p>
+                </li>
+                )
+              }) : null
           }
  
         </ul>
