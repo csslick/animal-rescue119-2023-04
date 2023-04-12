@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import About from './pages/About';
 
 function App() {
   const [data, setData] = useState([]);
@@ -15,16 +16,19 @@ function App() {
       .then(res => res.json())
       .then(data => {
         const anim_data = data.getPetAnimalInfo.body.items.item;
+        console.log('data = ', data);
         console.log(anim_data);
         setData(anim_data);
       })
   }, []);
+
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/detail/:id" element={<Detail data={data} />} />
+        <Route path="/about" element={<About />} />
         {/* 맨 아래에 404 추가 */}
         <Route path="/*" element={<Page404 />} />
       </Routes>
