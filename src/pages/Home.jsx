@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 
 export default function Home(props) {
-  console.log(props)
+  // console.log(props)
   const { data } = props; // 동물데이터
 
   return (

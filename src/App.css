@@ -1,3 +1,8 @@
+:root {
+  --light : white;
+  --dark: black;
+}
+
 * {
   margin: 0;
 }
@@ -9,7 +14,8 @@
 }
 
 .navbar {
-  background: #000;
+  /* background: #000; */
+  background: var(--dark);
 }
 .navbar ul {
   padding: 0;
